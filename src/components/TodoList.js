@@ -2,7 +2,7 @@ import React from 'react'
 
 const TodoItem = props =>
   <li>
-    <div className="view">
+    <div className="view" >
       <input className="toggle" type="checkbox" />
       <label>
         {' '}
@@ -13,5 +13,5 @@ const TodoItem = props =>
 
 export default props =>
   <ul className="todo-list">
-    {props.todos.map(todo => <TodoItem />)}
+    {props.todos.map((todo, i) => <TodoItem key={i} />)}
   </ul>
